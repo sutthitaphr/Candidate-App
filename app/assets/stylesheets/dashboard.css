@@ -1,0 +1,23 @@
+.wallpaper2 {
+    margin-top: 5%;
+    position:absolute;
+    top: 252px;;
+    margin-left: 5%;
+}
+
+.new_app{
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+.new_link{
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.posts_div{
+    margin-top: 2%;
+}

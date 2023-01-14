@@ -1,0 +1,74 @@
+/*Link the other css files*/
+@import "forms.css";
+@import "dashboard.css";
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.sign_up {
+    text-align: center;
+    position:absolute;
+    font-size: 18px;
+    margin-left: 91%;
+    font-family: cursive;
+}
+
+ .sign_in{
+    text-align: center;
+    position:absolute;
+    font-size: 18px;
+    margin-left: 96%;
+    font-family: cursive;
+ }
+
+ .slash_symbol{
+    position:absolute;
+    font-size: 18px;
+    margin-left: 95%;
+    font-family: cursive;
+    color: #4080ed;
+ }
+
+
+ .about_div {
+    width: 500px;
+    margin-left: 7%;
+    padding-top: 11%;
+    color: aliceblue;
+ }
+ .about_div2 {
+    width: 500px;
+    margin-left: 7%;
+    color: aliceblue;
+ }
+.about_text {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 25px;
+    font-family: cursive;
+}
+.about_text2 {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 25px;
+    font-family: cursive;
+}
+ .wallpaper {
+    margin-top: 7%;
+    position:absolute;
+    top: 252px;;
+    margin-left: 40%;
+}
+
+.block{
+    margin-top: 1%;
+    background-color: #4080ed;
+    width: auto;
+    height: 100vh;
+}
+
+p{
+    font-family: cursive;
+}

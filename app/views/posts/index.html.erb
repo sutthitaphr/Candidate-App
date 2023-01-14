@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Applicant List</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p style="text-align: center;">
+      <%= link_to "Edit", post %>
+    </p>
+    <hr>
+  <% end %>
+</div>
+
+<div class="new_app">
+<%= link_to "New Applicant", new_post_path %>
+</div>

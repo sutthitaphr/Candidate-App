@@ -1,0 +1,63 @@
+
+<!-- Create a Navbar using bootstrap v5.0-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-top: 1%; padding-bottom: 1%">
+
+  <!--Container-fluid gives the nav bar a full width and spanning the width of the viewpoint-->
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+
+    <!--Creating a responsive nav bar: creates a button for dropdown when the web page collapse into smaller view-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--When the web pag collaspe all these obtions will be inside the nav bar-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://resources.workable.com/">Resources</a>
+        </li>
+
+      <!--  <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Applicants
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Hired</a></li>
+            <li><a class="dropdown-item" href="#">In Process</a></li>
+            <li><a class="dropdown-item" href="#">Rejected</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">My Profile</a></li>
+          </ul>
+
+        </li>
+      -->
+      </ul>
+
+      <ul class="navbar-nav">
+        <% if current_user %>
+          <li class="nav-item"> <%= link_to "Edit Account", edit_user_registration_path, class: "nav-link" %></li>
+          <li class="nav-item"> <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-small btn-primary mx-2" %></li>
+        <% else %>
+          <li class="nav-item"> <%= link_to "Sign Up", new_user_registration_path, class: "nav-link"  %></li>
+          <li class="nav-item"> <%= link_to "Log In", new_user_session_path, class: "nav-link"  %></li>
+        <% end %>
+      </ul>
+
+      <form class="d-flex" action="/search">
+        <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search" style="width: 300px;">
+        <button class="btn btn-light" type="submit" style="background-color: #d8e9ff;">Search</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</nav>

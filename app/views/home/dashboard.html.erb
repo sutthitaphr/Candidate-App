@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1 class="header"> Dashboard </h1>
+    </head>
+        <body>
+
+            <!--If the user is signed in show the contents below-->
+            <% if current_user %>
+
+                <!--Retrieve the user email-->
+                <p style="text-align: center; margin-top: 30px;">Hello <%= current_user.email %></p>
+                
+                <!--Return the user name when connecting-->
+                <% if current_user.moderator? %>
+                    <p>Congratulations</p>
+                <% end %>
+
+                <!--Give a role the new host-->
+                <p style="text-align: center;">You are a <%= current_user.role %></p>
+                <hr />
+
+                <div class="new_app">
+                    <%= link_to "New Applicant", new_post_path %>
+                </div>
+
+                <div class="new_link">
+                    <%= link_to "View Applicants", posts_path %>
+                </div>
+
+            <% else %>
+            <!--If the user is not signed in , alert and show the content below-->
+                <p style="text-align: center;"> You are not signed in <p>
+
+                <div class="block">
+                    <div class="wallpaper2">
+                        <%= image_tag("dashboard/dashboard_bg.png", width: '1710px', height: '700px')%>
+                    </div>
+                </div>
+
+            <% end %>
+        </body>
+</html>

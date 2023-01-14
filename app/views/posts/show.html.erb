@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @post %>
+
+<div class="links" style="margin-top: 2%;">
+  <%= link_to "Edit Applicant", edit_post_path(@post) %> |
+  <%= link_to "Back to Applicants", posts_path %>
+  <div style="margin-top: 1%;">
+    <%= button_to "Delete", @post, method: :delete, class:'btn btn-secondary' %>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1 class="header"> Candidates Tracker </h1>
+    </head>
+    <body>
+    
+        <!--If the user is signed in show the contents below-->
+        <% if current_user %>
+
+        <p style="text-align: center;">Welcome!</p>
+        
+        <p style="text-align: center;">You are signed in</p>
+
+        <% else %>
+
+        <% end %>
+
+            <div class="block">
+
+                <div class="about_div">
+                    <p class= "about_text">Focus on your hiring process for candidates and ensure you only select high-impact candidates.
+                    Maintain each channel's applications all in one place.
+                    Quickly draw attention to strong applicants and remove those that are unfit. </p>
+                </div>
+
+                <div class="about_div2">
+                    <p class= "about_text2">Share important details and concise tasks with internal stakeholders. 
+                    Automate time-consuming tasks, such as arranging interviews, so you can concentrate on your most potential applicants.</p>
+                </div>
+                
+                <div class="wallpaper">
+                    <%= image_tag("home/home_wallpaper.jpg", width: '999px', height: '700px')%>
+                </div>
+            </div>
+
+    </body>
+</html>
